@@ -1,6 +1,7 @@
 # requires
 require "susy"
 require "breakpoint"
+require 'font-awesome-sass'
 
 project_type = :stand_alone
 http_path = "/"

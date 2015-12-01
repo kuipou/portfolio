@@ -1,0 +1,11 @@
+#top {
+    display:flex;
+    flex-wrap: wrap;
+    background-color: red;
+    justify-content: space-around;
+    .logo {margin-right:auto;}
+    .top {
+        ul{display:inline-flex;}
+        li{flex:1;}
+    }
+}

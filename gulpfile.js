@@ -1,9 +1,19 @@
-var gulp   = require('gulp');
-var uglify = require ('gulp-uglify');
-var compass = require('gulp-compass');
-var plumber = require('gulp-plumber');
-var prefix = require('gulp-autoprefixer');
+var gulp        = require('gulp');
+var uglify      = require ('gulp-uglify');
+var browserSync = require('browser-sync').create();
+var compass     = require('gulp-compass');
+var plumber     = require('gulp-plumber');
+var prefix      = require('gulp-autoprefixer');
  
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "."
+    });
+
+    gulp.watch("sass/*.scss", ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
+});
 gulp.task('sass', function() {
   gulp.src('sass/**/*.scss')
   .pipe(plumber({
@@ -17,9 +27,12 @@ gulp.task('sass', function() {
       sass: 'sass'
     }))
     .pipe(prefix('last 2 version'))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('css/'))
+    .pipe(browserSync.stream());
     
 });
+
+
 gulp.task('js', function(){
  gulp.src('js/*.js')
  .pipe(plumber())
@@ -32,6 +45,6 @@ gulp.task('js', function(){
 
 gulp.task('watch', function() {
 	
-	gulp.watch('js/*.js', ['js']);
-	gulp.watch('sass/**/*.scss', ['sass']);
+	gulp.watch('js/*.js', ['js'], browserSync.reload);
+	gulp.watch('sass/**/*.scss', ['sass'], browserSync.reload);
 });
