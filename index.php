@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Testbed Lime</title>
+	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
 	<header id="top">
-		<aside class="logo"></aside>
+		<aside class="logo"><img src="http://placehold.it/90x100"></aside>
 		<nav class="top">
 			<ul>
 				<li>About</li>
@@ -16,9 +17,9 @@
 			</ul>
 		</nav>
 	</header>
-	<section>
+	<section >
 		
-		<h1>Sechum</h1>
+		<h1>Sechum 1</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero totam, quae! 
 		Consectetur corrupti placeat doloremque tempore dolore nobis quibusdam, recusandae. 
 		Maxime eius dolores omnis pariatur iure vel, modi error. Repellat.</p>

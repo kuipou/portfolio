@@ -1,9 +1,29 @@
 @import  "lib/lib";
 @import  "lib/mixins";
-
+@import  "../../font/lunch/stylesheet.css";
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic);
 // size
 $lg:  1200px;
 $med:  952px;
 $sm:   751px;
 
+// Configuring Susy Defaults
+$susy: (
+  columns:12,
+  global-box-sizing: border-box,
+  utter-position: split,
+  );
+
+// colors
+$light-blue:  #36c6f4;
+$dark-blue :  #12184c;
+$yellow:      #DE9D00;
+$bg:          #191921;
+
+
+// Imports
+
+@import "component";
 @import "top";
+@import "work";
+@import "footer";

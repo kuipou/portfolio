@@ -1,6 +1,0 @@
-gem 'compass'
-gem 'susy'
-gem 'breakpoint'
-gem 'compass-normalize'
-gem 'font-awesome-sass'
-source 'https://rubygems.org'

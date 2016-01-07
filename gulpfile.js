@@ -1,50 +1,66 @@
-var gulp        = require('gulp');
-var uglify      = require ('gulp-uglify');
-var browserSync = require('browser-sync').create();
-var compass     = require('gulp-compass');
-var plumber     = require('gulp-plumber');
-var prefix      = require('gulp-autoprefixer');
- 
-gulp.task('serve', ['sass'], function() {
+var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
+    rename = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin'),
+    cache = require('gulp-cache');
+var minifycss = require('gulp-minify-css');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync');
 
-    browserSync.init({
-        server: "."
-    });
-
-    gulp.watch("sass/*.scss", ['sass']);
-    gulp.watch("*.html").on('change', browserSync.reload);
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+       baseDir: "./"
+    }
+  });
 });
-gulp.task('sass', function() {
-  gulp.src('sass/**/*.scss')
-  .pipe(plumber({
+
+gulp.task('bs-reload', function () {
+  browserSync.reload();
+});
+
+gulp.task('images', function(){
+  gulp.src('images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/images/'));
+});
+
+gulp.task('styles', function(){
+  gulp.src(['sass/**/*.scss'])
+    .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
         this.emit('end');
     }}))
-  .pipe(compass({
-      config_file: './config.rb',
-      css: 'css',
-      sass: 'sass'
-    }))
-    .pipe(prefix('last 2 version'))
-    .pipe(gulp.dest('css/'))
-    .pipe(browserSync.stream());
-    
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(browserSync.reload({stream:true}))
 });
 
-
-gulp.task('js', function(){
- gulp.src('js/*.js')
- .pipe(plumber())
- .pipe(uglify())
- .pipe(gulp.dest('js/test'));
+gulp.task('scripts', function(){
+  return gulp.src('js/**/*.js')
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(browserSync.reload({stream:true}))
 });
 
-
-// watch
-
-gulp.task('watch', function() {
-	
-	gulp.watch('js/*.js', ['js'], browserSync.reload);
-	gulp.watch('sass/**/*.scss', ['sass'], browserSync.reload);
+gulp.task('default', ['browser-sync'], function(){
+  gulp.watch("sass/**/*.scss", ['styles']);
+  gulp.watch("js/**/*.js", ['scripts']);
+  gulp.watch("*.html", ['bs-reload']);
 });

@@ -1,0 +1,23 @@
+body {display:flex;  
+      flex-direction: column;
+      min-height:100vh;
+      background-color: $bg;
+    }
+.content { display:flex;
+            flex:1;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           
+  .sidebar {flex: 1; display:flex; }
+	.main {
+			flex:4.5;
+      margin-left: gutter() / 2;
+
+		}
+  .main-footer { display:flex; 
+                 flex-direction:row;
+                 justify-content: space-around;
+                 align-items:center;
+              }
+}
+img {max-width:100%; height:auto;}

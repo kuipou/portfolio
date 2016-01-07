@@ -1,11 +1,25 @@
+#top {display:flex; align-items: center; padding:0 10px;}
 #top {
-    display:flex;
-    flex-wrap: wrap;
-    background-color: red;
-    justify-content: space-around;
-    .logo {margin-right:auto;}
-    .top {
-        ul{display:inline-flex;}
-        li{flex:1;}
+  height:100px;
+  flex-wrap: wrap;
+  background-color: red; /* dev */
+  justify-content: space-around;
+  .logo {height: 100px;
+          margin-right:auto; 
+         background: url("../../images/logo.svg");
+          }
+  .top {
+    @include lunch(1.6em, 700);
+    a {text-decoration:none; color:$light-blue;}
+    width: span(4 of 12);
+    ul{justify-content:space-between; 
+      
+      list-style: none; 
+      
+      margin-top: auto;
+      display: flex;
+            // width: span(8 of 12);
+      li{flex:1; text-align:center; width:200px; }
     }
+  }
 }

@@ -1,0 +1,37 @@
+.main-footer {
+  height:50px;
+  display:flex; 
+
+  margin-top: 1em;
+  // background-color: red; /* dev */
+  .tag { height:20px; 
+    // background-color:gray; /* dev */
+    flex:1; 
+    padding-left:50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;}
+    .social {
+
+     margin-top: auto;
+
+     ul{
+      justify-content:flex-end; 
+      // background-color:green; /* dev */
+      list-style: none; 
+      
+      
+      display: flex;
+      
+      li {width: 50px; height: 50px;
+        border-radius:50%;
+        border: 4px solid rgba(50, 50, 50, 1);
+        color:rgba(50, 50, 50, 1);
+        font-size: 2em;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+         }
+       }
+     }
+}

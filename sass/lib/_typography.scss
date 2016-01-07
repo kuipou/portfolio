@@ -1,0 +1,8 @@
+// Mixin for Tyopgraphy
+// Lunchbox Font
+@mixin lunch ($size, $weight) {
+	font: $size 'Lunchbox', Helvetica, Arial, sans-serif;
+	font-weight:$weight;
+	}
+
+	
