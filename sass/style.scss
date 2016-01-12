@@ -7,6 +7,15 @@ $lg:  1200px;
 $med:  952px;
 $sm:   751px;
 
+$breakpoints: (
+  'small'     : 320px,
+  'med'       : 640px,
+  'large'     : 920px,
+  'wide'      : 1200px,
+  'mega'      : 1400px,
+  // ...
+  );
+
 // Configuring Susy Defaults
 $susy: (
   columns:12,
@@ -19,7 +28,13 @@ $light-blue:  #36c6f4;
 $dark-blue :  #12184c;
 $yellow:      #DE9D00;
 $bg:          #191921;
+$text:        rgba(50, 50, 56, 1);
 
+body {display:flex;  
+      flex-direction: column;
+      min-height:100vh;
+      background-color: $bg;
+    }
 
 // Imports
 

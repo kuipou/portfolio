@@ -1,24 +1,58 @@
-.sidebar{
-    padding:10px;
-    background-color: lime;
-}
-.main {
-     display:flex;
-     flex-wrap: wrap;
-    
-    h1 {
-        @include lunch(2em,700);
-        color: $yellow;
-        background-color: #456;
-        flex:1; min-width:100%;
-        margin-top: 1.4rem;
-        height:1.4em;
+.sidebar {
+  @include lunch(2.2em,700);
 
-        margin-bottom:0.5rem;
-        
-        }
+  a{color: lighten($bg, 40%);
+    &:visited {}}
+    @include mappy-bp (large) {
+    padding:0px;
     
-    .screenshot, .description{flex:1 0 0; min-width:25%;}
     
+    flex:1;
+ 
+    min-width: span(2);
 
+  }
+  
+  ul{ display:flex; 
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around; 
+    list-style-type: none;
+    @include mappy-bp(large) {
+      flex-direction: column;
+      justify-content: center;
+      padding:1em;
+      li {padding:0.1em 0;}
+    }
+  
+    }
 }
+
+
+.main h1 {
+  font: 1.7rem/1.8rem 'Lunchbox', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: $yellow;
+  margin:0 0.2em 0.4rem ;
+  @include mappy-bp(large) {
+    flex:1; min-width:100%;
+    font-size: 2em;
+    margin: 0.5rem 0;
+    height:1em;  
+       }
+}
+.screenshot {justify-content:center;}
+.screenshot, 
+.description{flex:1 0 0; min-width:25%; 
+              padding: 0 0.5em;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              img{max-width:100%;}
+              @include cabin(1.2em, 400);
+              color: lighten($bg, 70%);
+              @include mappy-bp(large) {
+              min-height: 350px;
+               }
+              .demo {min-width:100%; margin-top:auto;}
+              }

@@ -4,5 +4,8 @@
 	font: $size 'Lunchbox', Helvetica, Arial, sans-serif;
 	font-weight:$weight;
 	}
-
+@mixin cabin ($size, $weight) {
+	font: $size 'Cabin', Helvetica, Arial, sans-serif;
+	font-weight:$weight;
+	}
 	

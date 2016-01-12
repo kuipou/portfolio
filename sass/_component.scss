@@ -3,21 +3,39 @@ body {display:flex;
       min-height:100vh;
       background-color: $bg;
     }
-.content { display:flex;
+.content, .sidebar { display:flex;
             flex:1;
            flex-wrap: wrap;
+           flex-direction: column;
            justify-content: space-between;
+
+           @include mappy-bp (large) {
+            flex-direction: row;
+           }
+          }
            
-  .sidebar {flex: 1; display:flex; }
-	.main {
+.main {
+
+      @include mappy-bp (large) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items:flex-start;
 			flex:4.5;
-      margin-left: gutter() / 2;
+      margin-top:2rem;
+      min-height: 350px;
+      margin-left: gutter() / 2;}
 
 		}
-  .main-footer { display:flex; 
-                 flex-direction:row;
-                 justify-content: space-around;
-                 align-items:center;
-              }
-}
-img {max-width:100%; height:auto;}
+
+button {display:flex; align-items:center; justify-content:center;
+        border:2px solid darken($light-blue, 10%);
+        border-radius:0.2em;
+        @include cabin(1em,700); 
+        text-transform: uppercase;
+        padding:0.5em 0;
+        &:hover{border:2px solid lighten($light-blue, 30%); color:lighten($light-blue, 30%);}
+        a{color: darken($light-blue, 10%);
+          &:hover {color:lighten($light-blue, 30%); }
+        }
+
+      }
