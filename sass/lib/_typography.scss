@@ -8,4 +8,19 @@
 	font: $size 'Cabin', Helvetica, Arial, sans-serif;
 	font-weight:$weight;
 	}
-	
+
+/* Contextual heading sizes with Sass
+by:  Zach Green Url: http://codepen.io/zgreen/post/contextual-heading-sizes-with-sass
+
+ Create a step size.*/
+/* This is the percentage each heading will be reduced by. */
+$step-size-heading: 0.33333;
+/* Amplifier value */
+$amplifier-heading: 1.5;
+/* The mixin */
+@mixin heading-size($size) {
+    font-size: $size * $step-size-heading * $amplifier-heading + em;
+}
+
+
+

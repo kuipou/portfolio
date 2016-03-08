@@ -1,0 +1,26 @@
+.sidebar{
+    padding:10px;
+    background-color: lime;
+    margin-top: 75px;
+    // padding-left:6em;
+}
+.main {
+     display:flex;
+     flex-wrap: wrap;
+    
+    h1 {
+        @include lunch(2em,700);
+        color: $yellow;
+        background-color: #456;
+        flex:1; min-width:100%;
+        margin-top: 1.4rem;
+        height:1.4em;
+
+        margin-bottom:0.5rem;
+        
+        }
+    
+    .screenshot, .description{flex:1 0 0; min-width:25%;}
+    
+
+}

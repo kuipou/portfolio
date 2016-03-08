@@ -1,0 +1,26 @@
+.sidebar {
+  @include lunch(2.2em,700);
+
+  a{color: lighten($bg, 40%);
+    &:visited {}}
+    @include mappy-bp (large) {
+      padding:0px;
+      flex:1;
+      min-width: span(2);
+      }
+  
+  ul{ display:flex; 
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around; 
+    list-style-type: none;
+    @include mappy-bp(large) {
+      flex-direction: column;
+      justify-content: center;
+      padding:1em;
+      li {padding:0.1em 0;}
+     }
+  
+    }
+}
+

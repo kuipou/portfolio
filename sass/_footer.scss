@@ -3,9 +3,10 @@
   display:flex; 
 
   margin-top: 1em;
-  // background-color: red; /* dev */
+  margin-bottom:0.5em;
+  
   .tag { height:20px; 
-    // background-color:gray; /* dev */
+
     flex:1; 
     padding-left:50px;
     margin-top: auto;
@@ -16,15 +17,12 @@
     .social {
 
      margin-top: auto;
+     padding-right: 0.5em;
 
      ul{
-      justify-content:flex-end; 
-      // background-color:green; /* dev */
-      list-style: none; 
-      
-      
       display: flex;
-      
+      justify-content:flex-end; 
+      list-style: none;  
       li {width: 50px; height: 50px; margin:0 2px;
         border-radius:50%;
         border: 3px solid $text;

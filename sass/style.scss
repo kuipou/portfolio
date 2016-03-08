@@ -33,12 +33,23 @@ $text:        rgba(50, 50, 56, 1);
 body {display:flex;  
       flex-direction: column;
       min-height:100vh;
-      background-color: $bg;
+      
+      background: url("../../images/bg.png") no-repeat center center fixed $bg;
+      background-size: cover;
     }
-
+h1 { @include heading-size(6);}
+h2 { @include heading-size(5); color: lighten($bg, 40%); font: 'Lunchbox', Helvetica, Arial, sans-serif;}
+h3 { @include heading-size(4);}
+h4 { @include heading-size(3);}
+h5 { @include heading-size(2);}
+h6 { @include heading-size(1);}
 // Imports
 
 @import "component";
+@import "input";
 @import "top";
+@import "gallery";
+@import "sidebar";
 @import "work";
+@import "contact";
 @import "footer";

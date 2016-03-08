@@ -1,47 +1,21 @@
-.sidebar {
-  @include lunch(2.2em,700);
 
-  a{color: lighten($bg, 40%);
-    &:visited {}}
-    @include mappy-bp (large) {
-    padding:0px;
-    
-    
-    flex:1;
- 
-    min-width: span(2);
-
-  }
-  
-  ul{ display:flex; 
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: space-around; 
-    list-style-type: none;
-    @include mappy-bp(large) {
-      flex-direction: column;
-      justify-content: center;
-      padding:1em;
-      li {padding:0.1em 0;}
-    }
-  
-    }
-}
-
-
-.main h1 {
+.main 
+  h1 {
   font: 1.7rem/1.8rem 'Lunchbox', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: $yellow;
   margin:0 0.2em 0.4rem ;
   @include mappy-bp(large) {
     flex:1; min-width:100%;
-    font-size: 2em;
+    @include heading-size(5);
     margin: 0.5rem 0;
     height:1em;  
        }
+  h2 { @include heading-size(5); color: lighten($bg, 40%); font: 'Lunchbox', Helvetica, Arial, sans-serif;}
 }
+
 .screenshot {justify-content:center;}
+.contact,
 .screenshot, 
 .description{flex:1 0 0; min-width:25%; 
               padding: 0 0.5em;

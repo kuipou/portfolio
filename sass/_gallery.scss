@@ -1,0 +1,16 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  // flex-wrap: wrap;
+  img{max-width:100%;}
+  // h2 {width:100%; @include heading-size(5); display:block;}
+  @include mappy-bp(large) {
+    min-width: 100%;
+    flex-wrap: nowrap;
+    flex:1;
+    justify-content: space-around;
+    .gallery-item {background-color: #764432; 
+     max-width:100%;
+    }
+  }
+}
