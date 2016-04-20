@@ -13,7 +13,9 @@
     margin-bottom: auto;
     text-align: center;
     color:$text;
-    @include cabin(0.9em, 700);}
+    @include cabin(0.9em, 700);
+    a{color:$text;}
+      }
     .social {
 
      margin-top: auto;

@@ -1570,6 +1570,8 @@ h1 h2 {
     color: #323238;
     font: 0.9em "Cabin", Helvetica, Arial, sans-serif;
     font-weight: 700; }
+    .main-footer .tag a {
+      color: #323238; }
   .main-footer .social {
     margin-top: auto;
     padding-right: 0.5em; }

@@ -17,4 +17,4 @@ function chrisport_setup() {
   register_nav_menu( 'Nav', 'Nav Menu' );
 
 }
-add_action( 'after_setup_theme', 'twentysixteen_setup' );
+add_action( 'after_setup_theme', 'chrisport_setup' );
