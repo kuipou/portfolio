@@ -4,7 +4,7 @@
   font: 1.7rem/1.8rem 'Lunchbox', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: $yellow;
-  margin:0 0.2em 0.4rem ;
+  margin:0 0.2em 0.7rem ;
   @include mappy-bp(large) {
     flex:1; min-width:100%;
     @include heading-size(5);

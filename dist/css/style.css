@@ -1385,7 +1385,7 @@ select {
           justify-content: space-around; }
   #top .logo {
     height: 100px;
-    width: 100px;
+    width: 75px;
     margin-right: auto;
     background: url("../../images/logo.svg") no-repeat;
     -webkit-flex: 1;
@@ -1494,7 +1494,7 @@ h1 {
   font: 1.7rem/1.8rem 'Lunchbox', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #DE9D00;
-  margin: 0 0.2em 0.4rem; }
+  margin: 0 0.2em 0.7rem; }
   @media all and (min-width: 57.5em) {
     .main
 h1 {
@@ -1563,15 +1563,21 @@ h1 h2 {
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding-left: 50px;
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    color: #323238;
-    font: 0.9em "Cabin", Helvetica, Arial, sans-serif;
+    color: #4a4a53;
+    font: 0.7em "Cabin", Helvetica, Arial, sans-serif;
     font-weight: 700; }
     .main-footer .tag a {
-      color: #323238; }
+      color: #565660; }
+    @media all and (min-width: 57.5em) {
+      .main-footer .tag {
+        padding-left: 50px;
+        font: 0.9em "Cabin", Helvetica, Arial, sans-serif;
+        font-weight: 700; }
+        .main-footer .tag a {
+          color: #4a4a53; } }
   .main-footer .social {
     margin-top: auto;
     padding-right: 0.5em; }
@@ -1588,9 +1594,8 @@ h1 h2 {
         height: 50px;
         margin: 0 2px;
         border-radius: 50%;
-        border: 3px solid #323238;
         color: #323238;
-        font-size: 2em;
+        font-size: 1.7em;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -1600,3 +1605,7 @@ h1 h2 {
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center; }
+        @media all and (min-width: 57.5em) {
+          .main-footer .social ul li {
+            border: 3px solid #323238;
+            font-size: 2em; } }
