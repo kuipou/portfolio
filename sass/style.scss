@@ -1,3 +1,14 @@
+
+/*!
+Theme Name: Christophe's Portfolio
+Theme URI: http://chrisrudyj.me
+Author: Christophe Rudyj
+Author URI: http://chrisrudyj.me
+Description: My portfolio 
+Version: 1.0
+Text Domain: chrisport
+*/
+
 @import  "lib/lib";
 @import  "lib/mixins";
 @import  "../../font/lunch/stylesheet.css";
@@ -33,8 +44,8 @@ $text:        rgba(50, 50, 56, 1);
 body {display:flex;  
       flex-direction: column;
       min-height:100vh;
-      
-      background: url("../../images/bg.png") no-repeat center center fixed $bg;
+      font-size:16px;
+      background: url("images/bg.png") no-repeat center center fixed $bg;
       background-size: cover;
     }
 h1 { @include heading-size(6);}

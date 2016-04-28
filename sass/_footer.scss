@@ -4,6 +4,10 @@
 
   margin-top: 1em;
   margin-bottom:0.5em;
+  // @include mappy-bp(small) {
+  //   margin: 0.5em 0 0.2em;
+  //   background-color: #FFF;
+  // }
   
   .tag { height:20px; 
 
@@ -11,12 +15,14 @@
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    color:lighten($text, 10%);
-    a{color:lighten($text, 15%);}
+    color:lighten($text, 20%);
+    a{color:lighten($text, 25%);}
       
     @include cabin(0.7em, 700);
     @include mappy-bp(large) { 
     padding-left:50px;
+    padding-top:0.5em;
+    margin-bottom: 0;
     @include cabin(0.9em, 700);
     a{color:lighten($text, 10%);}
       }

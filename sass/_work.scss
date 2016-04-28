@@ -14,7 +14,7 @@
   h2 { @include heading-size(5); color: lighten($bg, 40%); font: 'Lunchbox', Helvetica, Arial, sans-serif;}
 }
 
-.screenshot {justify-content:center;}
+.screenshot {justify-content:center; }
 .contact,
 .screenshot, 
 .description{flex:1 0 0; min-width:25%; 
@@ -22,11 +22,20 @@
               display: flex;
               flex-direction: column;
               flex-wrap: wrap;
+              margin: 0.3em 0;
               img{max-width:100%;}
               @include cabin(1.2em, 400);
               color: lighten($bg, 70%);
               @include mappy-bp(large) {
               min-height: 350px;
+              margin: 0;
                }
-              .demo {min-width:100%; margin-top:auto;}
+              .demo {min-width:100%; margin-top:auto;
+                @include mappy-bp(max med) {
+                  margin-top: 20px;
+
+                  // background-color: #FFF;
+                  
+                }
+              }
               }

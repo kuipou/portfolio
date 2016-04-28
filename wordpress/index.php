@@ -1,0 +1,28 @@
+<?php 
+/* Template Name: Sechum */
+get_header();
+get_sidebar();
+ ?>
+    
+    <section class="main">
+      <?php while ( have_posts() ) : the_post(); 
+      
+      the_title('<h1>', '</h1>' ); ?>
+      <section class="screenshot">
+      <img src="<?php echo get_post_thumbnail_url(); ?>" alt="Screen shot of <?php  echo get_the_title(); ?>">
+      </section>
+      <section class="description">
+      <?php the_content( ); ?>
+       
+       <a class="demo btn" href="<?php get_metadata( $post->ID, chrisport_url, true ); ?>">Visit the site</a></button></aside>
+        </section>
+        <?php endwhile; ?>
+      </section>
+
+
+
+
+<!-- post -->
+
+<!-- post navigation -->
+<?php get_footer(); ?>

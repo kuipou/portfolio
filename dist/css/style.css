@@ -1,3 +1,12 @@
+/*!
+Theme Name: Christophe's Portfolio
+Theme URI: http://chrisrudyj.me
+Author: Christophe Rudyj
+Author URI: http://chrisrudyj.me
+Description: My portfolio 
+Version: 1.0
+Text Domain: chrisport
+*/
 /* Default Setup for Christophe Rudyj's Gulp */
 /*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
 @import url(../../font/lunch/stylesheet.css);
@@ -244,7 +253,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background: url("../../images/bg.png") no-repeat center center fixed #191921;
+  font-size: 16px;
+  background: url("images/bg.png") no-repeat center center fixed #191921;
   background-size: cover; }
 
 h1 {
@@ -1380,6 +1390,8 @@ select {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  font: 2rem "Lunchbox", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
@@ -1387,13 +1399,11 @@ select {
     height: 100px;
     width: 75px;
     margin-right: auto;
-    background: url("../../images/logo.svg") no-repeat;
+    background: url("images/logo.svg") no-repeat;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1; }
   #top .top {
-    font: 2em "Lunchbox", Helvetica, Arial, sans-serif;
-    font-weight: 700;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1; }
@@ -1533,6 +1543,7 @@ h1 h2 {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin: 0.3em 0;
   font: 1.2em "Cabin", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #c9c9d6; }
@@ -1544,12 +1555,18 @@ h1 h2 {
     .contact,
     .screenshot,
     .description {
-      min-height: 350px; } }
+      min-height: 350px;
+      margin: 0; } }
   .contact .demo,
   .screenshot .demo,
   .description .demo {
     min-width: 100%;
     margin-top: auto; }
+    @media all and (max-width: 39.9375em) {
+      .contact .demo,
+      .screenshot .demo,
+      .description .demo {
+        margin-top: 20px; } }
 
 .main-footer {
   height: 60px;
@@ -1566,14 +1583,16 @@ h1 h2 {
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-    color: #4a4a53;
+    color: #62626e;
     font: 0.7em "Cabin", Helvetica, Arial, sans-serif;
     font-weight: 700; }
     .main-footer .tag a {
-      color: #565660; }
+      color: #6e6e7b; }
     @media all and (min-width: 57.5em) {
       .main-footer .tag {
         padding-left: 50px;
+        padding-top: 0.5em;
+        margin-bottom: 0;
         font: 0.9em "Cabin", Helvetica, Arial, sans-serif;
         font-weight: 700; }
         .main-footer .tag a {
