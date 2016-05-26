@@ -11,7 +11,9 @@
     margin: 0.5rem 0;
     height:1em;  
        }
-  h2 { @include heading-size(5); color: lighten($bg, 40%); font: 'Lunchbox', Helvetica, Arial, sans-serif;}
+     }
+  h2 { @include heading-size(5); font-family: 'Lunchbox', Helvetica, Arial, sans-serif;
+    a{  color: lighten($bg, 40%); }
 }
 
 .screenshot {justify-content:center; }
@@ -25,7 +27,12 @@
               margin: 0.3em 0;
               img{max-width:100%;}
               @include cabin(1.2em, 400);
+              line-height: 1.4em;
               color: lighten($bg, 70%);
+              p{margin-bottom:0.5em;
+                a { color:$light-blue;
+                  @extend .hvr-bounce-to-right;}
+              }
               @include mappy-bp(large) {
               min-height: 350px;
               margin: 0;

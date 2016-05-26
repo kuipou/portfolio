@@ -9,12 +9,11 @@ get_sidebar();
       
       the_title('<h1>', '</h1>' ); ?>
       <section class="screenshot">
-      <img src="<?php echo get_post_thumbnail_url(); ?>" alt="Screen shot of <?php  echo get_the_title(); ?>">
-      </section>
+      <?php the_post_thumbnail(); ?></section>
       <section class="description">
       <?php the_content( ); ?>
        
-       <a class="demo btn" href="<?php get_metadata( $post->ID, chrisport_url, true ); ?>">Visit the site</a></button></aside>
+       <a class="demo btn" href="<?php /* get_metadata( $post->ID, chrisport_url, true );*/ ?>">Visit the site</a></aside>
         </section>
         <?php endwhile; ?>
       </section>

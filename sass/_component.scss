@@ -47,8 +47,7 @@ button {display:flex; align-items:center; justify-content:center;
         text-transform: uppercase;
         padding:0.5em 0;
         &:hover{border:2px solid lighten($light-blue, 30%); color:lighten($light-blue, 30%);}
-        a, &:visited{color: darken($light-blue, 10%);
-          &:hover {color:lighten($light-blue, 30%); }
+        color: darken($light-blue, 10%);
         }
 
-      }
+      

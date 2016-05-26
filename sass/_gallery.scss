@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   // flex-wrap: wrap;
   img{max-width:100%;}
-  // h2 {width:100%; @include heading-size(5); display:block;}
   @include mappy-bp(large) {
     min-width: 100%;
     flex-wrap: nowrap;

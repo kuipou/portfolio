@@ -26,5 +26,8 @@
     "node-sass": "^3.4.2",
     "sanitize.css": "^3.0.0",
     "susy": "^2.2.9"
+  },
+  "dependencies": {
+    "hover.css": "^2.0.2"
   }
 }
