@@ -1,20 +1,31 @@
-<? 
-/* Template Name: Sechum */
-get_header();
-get_sidebar();
- ?>
-    
-    <section class="main">
+<?php get_header();
+$category = get_categories();
+?>
+
+<section class="main">
+  <h1>Work</h1>
+
+  <?php 
+  foreach ($category as $category) {
+    $cat_id = $category->term_id;
+    ?>
+    <h2><a href="#<?php echo $category->name ?>"><?php echo $category->name ?></a></h2><br />
+    <section class="gallery">
+      <?php 
+      query_posts("cat=$cat_id&posts_per_page=50" );
+      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+      $thumb_id = get_post_thumbnail_id();
+      $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+      $thumb_url = $thumb_url_array[0];
+      ?>
+      <article class="gallery-item">
+      <a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb_url ?>" alt="Screen shot of <? get_the_title(); ?>"></a>
+      </article>
 
       
-      <h1>Syndicat des Employ&eacute; du CHUM</h1>
-      <section class="screenshot">
-      <img src="<? get_bloginfo('url' ); ?>/images/sechum_500.png" alt="screen shot of Sechum">
-      </section>
-      <section class="description">
-      <p>I was approached to do a makeover to the site as the older iteration seemed stucked in 1999. To ensure the site would be easy to use I chose Wordpress as it's CMS. To meet the demands of the client many custom plugins were written as well.</p>
-       
-       <a class="demo btn" href="http://www.sechum.org">Visit the site</a></button></aside>
-        </section>
-      </section>
-<? get_footer(); ?>
+
+    
+  <?php endwhile;
+   ?></section><?php endif; }  // foreach ?>
+</section>
+<?php get_footer(); ?>

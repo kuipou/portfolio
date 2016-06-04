@@ -1,7 +1,7 @@
 <?php 
-/* Template Name: About */
+/* Template Name: Sechum */
 get_header();
-
+get_sidebar();
  ?>
     
     <section class="main">

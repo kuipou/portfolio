@@ -1,14 +1,13 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  // flex-wrap: wrap;
   img{max-width:100%;}
   @include mappy-bp(large) {
     min-width: 100%;
     flex-wrap: nowrap;
     flex:1;
     justify-content: space-around;
-    .gallery-item {background-color: #764432; 
+    .gallery-item {
      max-width:100%;
     }
   }

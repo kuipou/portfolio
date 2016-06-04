@@ -12,10 +12,7 @@
 
  <header id="top">
     <aside class="logo">&nbsp;</aside>
-    <nav class="top"><?    /**
-      * Displays a navigation menu
-      * @param array $args Arguments
-      */
+    <nav class="top"><?php 
       $args = array(
         'theme_location' => 'nav',
         'menu' => '',
@@ -30,7 +27,7 @@
         'after' => '',
         'link_before' => '',
         'link_after' => '',
-        'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+        'items_wrap' => '<ul>%3$s</ul>',
         'depth' => 0,
         'walker' => ''
       );

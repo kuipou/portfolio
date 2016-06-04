@@ -9,12 +9,12 @@
  *
  * @package plugin
  */
-function cwc_maintenance_mode() {
-    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
-        wp_die('Maintenance, please come back soon.');
-    }
-}
-add_action('get_header', 'cwc_maintenance_mode');
+// function cwc_maintenance_mode() {
+//     if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
+//         wp_die('Maintenance, please come back soon.');
+//     }
+// }
+// add_action('get_header', 'cwc_maintenance_mode');
 
 function chrisport_setup() {
   add_theme_support( 'title-tag' );
@@ -41,7 +41,7 @@ function chrisport_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'chrisport_scripts' );
 
-function modify_jquery() {
+/* function modify_jquery() {
   if (!is_admin()) {
     // comment out the next two lines to load the local copy of jQuery
     wp_deregister_script('jquery');
@@ -49,4 +49,4 @@ function modify_jquery() {
     wp_enqueue_script('jquery');
   }
 }
-add_action('init', 'modify_jquery');
+add_action('init', 'modify_jquery');*/

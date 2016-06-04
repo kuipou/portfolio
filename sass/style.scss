@@ -5,13 +5,13 @@ Theme URI: http://chrisrudyj.me
 Author: Christophe Rudyj
 Author URI: http://chrisrudyj.me
 Description: My portfolio 
-Version: 1.0
+Version: 1.2
 Text Domain: chrisport
 */
 
 @import  "lib/lib";
 @import  "lib/mixins";
-@import  "../../font/lunch/stylesheet.css";
+@import  "font/lunch/stylesheet.css";
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic);
 // size
 $lg:  1200px;
@@ -49,7 +49,6 @@ body {display:flex;
       background-size: cover;
     }
 h1 { @include heading-size(6);}
-// h2 { @include heading-size(5);}
 h3 { @include heading-size(4);}
 h4 { @include heading-size(3);}
 h5 { @include heading-size(2);}

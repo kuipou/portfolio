@@ -1,4 +1,3 @@
-
 .main 
   h1 {
   font: 1.7rem/1.8rem 'Lunchbox', Helvetica, Arial, sans-serif;
@@ -40,8 +39,6 @@
               .demo {min-width:100%; margin-top:auto;
                 @include mappy-bp(max med) {
                   margin-top: 20px;
-
-                  // background-color: #FFF;
                   
                 }
               }

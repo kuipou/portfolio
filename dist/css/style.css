@@ -4,12 +4,12 @@ Theme URI: http://chrisrudyj.me
 Author: Christophe Rudyj
 Author URI: http://chrisrudyj.me
 Description: My portfolio 
-Version: 1.0
+Version: 1.2
 Text Domain: chrisport
 */
 /* Default Setup for Christophe Rudyj's Gulp */
 /*! sanitize.css v3.0.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
-@import url(../../font/lunch/stylesheet.css);
+@import url(font/lunch/stylesheet.css);
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,500,400italic,500italic,700,700italic);
 ul, menu, dir {
   -webkit-margin-before: 0;
@@ -1570,7 +1570,6 @@ select {
           -ms-flex-pack: distribute;
               justify-content: space-around; }
       .gallery .gallery-item {
-        background-color: #764432;
         max-width: 100%; } }
 
 .sidebar {
@@ -1770,7 +1769,6 @@ h2 {
       .main-footer .tag {
         padding-left: 50px;
         padding-top: 0.5em;
-        margin-bottom: 0;
         font: 0.9em "Cabin", Helvetica, Arial, sans-serif;
         font-weight: 700; }
         .main-footer .tag a {
